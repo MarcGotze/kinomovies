@@ -1,0 +1,19 @@
+nav {
+  display: flex;
+  gap: 30px;
+  position: relative;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  width: 44px;
+  border-radius: 10%;
+  background-color: white;
+}
+
+.nav-link:active {
+  background-color: #FFBE00;
+}

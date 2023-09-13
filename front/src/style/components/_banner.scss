@@ -1,0 +1,22 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #9B9999;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  .logo-end {
+    color: #9B9999;
+  }
+}
+
+.avatar {
+  height: 50px;
+  width: 50px;
+  border-bottom: 1px solid #9B9999;
+  background-color: white;
+  border-radius: 50%;
+}

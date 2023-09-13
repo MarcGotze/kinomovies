@@ -1,0 +1,41 @@
+.movies-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.movies-card {
+  position: relative;
+  img {
+    border-radius: 5%;
+  }
+  &:hover .hover-box {
+    display: block;
+  }
+  &:hover .movies-title {
+    color: rgba(234, 240, 246, 1);
+  }
+}
+
+.hover-box {
+  position: absolute;
+  display: none;
+  top: 0;
+  background-color: black;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  border-radius: 5%;
+}
+
+.movies-title {
+  position: absolute;
+  top: 70px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}

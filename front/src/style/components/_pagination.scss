@@ -1,0 +1,14 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.pagination-btn {
+  transition: transform .2s;
+}
+
+.pagination-btn:hover {
+  transform: scale(1.8);
+  color: #FFBE00;
+}

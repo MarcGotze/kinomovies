@@ -1,0 +1,18 @@
+@import './components/index.scss';
+@import './pages/index.scss';
+
+:root {
+  font-family: 'Karla', sans-serif;
+  color-scheme: dark;
+  background: rgb(38,40,64);
+  background: linear-gradient(90deg, rgba(38,40,64,1) 0%, rgba(62,27,72,1) 100%);
+  box-sizing: border-box;
+  // COLORS
+  $grey: #9B9999;
+}
+
+.wrapper {
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+}
