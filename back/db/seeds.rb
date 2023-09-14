@@ -123,7 +123,20 @@ puts "==========================================================================
     password: Faker::Internet.password(min_length: 8),
     image_path: Faker::Avatar.image
   )
-  user.tags << Tag.all.sample(rand(3..5))
+
+  liked_tags = Tag.all.sample(rand(3..5))
+  disliked_tags = Tag.all.sample(rand(3..5))
+
+  disliked_tags -= liked_tags
+
+  liked_tags.each do |tag|
+    user.liked_tags.build(tag: tag)
+  end
+
+  disliked_tags.each do |tag|
+    user.disliked_tags.build(tag: tag)
+  end
+
   user.save(validate: false)
   puts user.username
 end
