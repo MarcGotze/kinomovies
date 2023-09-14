@@ -1,0 +1,17 @@
+.user-card {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  img {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid black;
+  }
+}
+
+.user-username {
+  margin-left: 12px;
+}
