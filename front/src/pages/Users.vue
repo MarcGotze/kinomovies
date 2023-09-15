@@ -1,7 +1,7 @@
 <script setup>
   import Banner from '../components/Banner.vue';
   import NavBar from '../components/NavBar.vue';
-  import User from '../components/User.vue';
+  import Cards from '../components/Cards.vue';
   import { ref, onBeforeMount } from 'vue'
   import { getUsers } from '../services/users.js';
 
@@ -16,5 +16,5 @@
 <template>
   <Banner :label="pageLabel" />
   <NavBar />
-  <User :users="users" />
+  <Cards :users="users" />
 </template>
