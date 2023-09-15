@@ -48,6 +48,8 @@ onMounted(async () => {
 <template>
   <Banner v-if="movieDetails" :label="movieDetails.title + ` (${movieDetails.release_date.slice(0, -6)})` " />
   <NavBar />
+
+  <!-- MOVIE DETAILS -->
   <div class="movie-show flex my-5" v-if="movieDetails">
     <img :src="image + movieDetails.poster_path" :alt="movieDetails.title + ' poster'">
     <div class="flex flex-col">
@@ -60,6 +62,8 @@ onMounted(async () => {
           </li>
         </ul>
       </div>
+      
+      <!-- USERS CARDS MODAL -->
       <div class="users-matched ml-5">
         <h2 class="text-2xl mt-5">Users with Similar Interests</h2>
         <div v-if="filteredUsers.length > 0">
