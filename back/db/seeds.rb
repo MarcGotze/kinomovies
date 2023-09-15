@@ -13,100 +13,18 @@ puts "==========================================================================
 puts "Creating tags..."
 puts "=========================================================================="
 
-tag = Tag.create(
-  name: "Action"
-)
-puts tag.name
+tag_names = [
+  "Action", "Adventure", "Animation", "Comedy", "Crime",
+  "Documentary", "Drama", "Family", "Fantasy", "History",
+  "Horror", "Music", "Mystery", "Romance", "Science Fiction",
+  "TV Movie", "Thriller", "War", "Western"
+]
 
-tag = Tag.create(
-  name: "Adventure"
-)
-puts tag.name
-
-tag = Tag.create(
-  name: "Animation"
-)
-puts tag.name
-
-tag = Tag.create(
-  name: "Comedy"
-)
-puts tag.name
-
-tag = Tag.create(
-  name: "Crime"
-)
-puts tag.name
-
-tag = Tag.create(
-  name: "Documentary"
-)
-puts tag.name
-
-tag = Tag.create(
-  name: "Drama"
-)
-puts tag.name
-
-tag = Tag.create(
-  name: "Family"
-)
-puts tag.name
-
-tag = Tag.create(
-  name: "Fantasy"
-)
-puts tag.name
-
-tag = Tag.create(
-  name: "History"
-)
-puts tag.name
-
-tag = Tag.create(
-  name: "Horror"
-)
-puts tag.name
-
-tag = Tag.create(
-  name: "Music"
-)
-puts tag.name
-
-tag = Tag.create(
-  name: "Mystery"
-)
-puts tag.name
-
-tag = Tag.create(
-  name: "Romance"
-)
-puts tag.name
-
-tag = Tag.create(
-  name: "Science Fiction"
-)
-puts tag.name
-
-tag = Tag.create(
-  name: "TV Movie"
-)
-puts tag.name
-
-tag = Tag.create(
-  name: "Thriller"
-)
-puts tag.name
-
-tag = Tag.create(
-  name: "War"
-)
-puts tag.name
-
-tag = Tag.create(
-  name: "Western"
-)
-puts tag.name
+# Boucle pour créer les tags
+tag_names.each do |tag_name|
+  tag = Tag.create(name: tag_name)
+  puts tag.name
+end
 
 puts "=========================================================================="
 puts "Tags completed !"
