@@ -37,7 +37,16 @@
 // RESPONSIVE
 
 @media (max-width: 767px) {
-  .collapse-arrow {
-    display: none;
+  .collapse-content {
+    ul {
+      flex-direction: column;
+    }
+  }
+
+  .collapse-title {
+    flex-direction: column;
+    img {
+      display: none;
+    }
   }
 }
