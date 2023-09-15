@@ -28,8 +28,8 @@
 <template>
   <Banner :label="pageLabel" />
   <NavBar />
-
   <Pagination @page="selectedPage = $event"/> <!-- La variable selectedPage est émise à movies-->
+
   <div class="movies-container mb-14">
     <div class="movies-card" v-if="movies" v-for="movie in movies" :key="movie.id">
       <router-link :to="'/show/' + movie.id"><img :src="image + movie.backdrop_path" :alt="movie.title + ' backdrop'">
@@ -39,4 +39,5 @@
       </router-link>
     </div>
   </div>
+
 </template>

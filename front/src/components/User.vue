@@ -9,7 +9,7 @@
       <div class="collapse-title text-xl font-medium flex items-center">
         <img :src="user.image_path" :alt="user.username">
         <span class="user-username mr-2"> {{ user.username }}</span>
-        <span v-if="$route.path != '/users'">Movie Compatibility: {{ Math.floor(user.rating) }}/10</span>
+        <span class="user-compatibility" v-if="$route.path != '/users'">Movie Compatibility: {{ Math.floor(user.rating) }}/10</span>
       </div>
       <div class="collapse-content">
         <div class="flex justify-end">
