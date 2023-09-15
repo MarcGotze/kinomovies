@@ -32,12 +32,12 @@
   <div class="movies-container mb-14">
     <!-- itération sur les movies pour l'affichage -->
     <div class="movies-card" v-if="movies" v-for="movie in movies" :key="movie.id">
-      <a href="#"><img :src="image + movie.backdrop_path" alt="">
+      <router-link :to="'/show/' + movie.id"><img :src="image + movie.backdrop_path" alt="">
         <div class="hover-box">
           <span class="movies-title">{{ movie.title }}</span>
-          <!-- <span class="movies-date"> ({{ movie.release_date.slice(0, -6) }})</span> -->
+          <!-- <span class="movies-date"> ({{ movie }})</span> -->
         </div>
-      </a>
+      </router-link>
     </div>
   </div>
 </template>
