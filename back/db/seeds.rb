@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+# Clean de la db
 Tag.destroy_all
 User.destroy_all
 
@@ -13,6 +14,7 @@ puts "==========================================================================
 puts "Creating tags..."
 puts "=========================================================================="
 
+# Liste des tags venant de TMBD
 tag_names = [
   "Action", "Adventure", "Animation", "Comedy", "Crime",
   "Documentary", "Drama", "Family", "Fantasy", "History",
@@ -34,6 +36,7 @@ puts "==========================================================================
 puts "Creating Users..."
 puts "=========================================================================="
 
+# Boucle créant les users
 20.times do
   user = User.new(
     username: Faker::Internet.username,
@@ -42,9 +45,11 @@ puts "==========================================================================
     image_path: Faker::Avatar.image
   )
 
+  # Selection et assignation de tags aléatoires
   liked_tags = Tag.all.sample(rand(3..5))
   disliked_tags = Tag.all.sample(rand(3..5))
 
+  # Comparateur évitant d'avoir les mêmes genres appréciés et détestés
   disliked_tags -= liked_tags
 
   liked_tags.each do |tag|

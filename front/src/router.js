@@ -3,7 +3,7 @@ import Movies from './pages/Movies.vue';
 import Show from './pages/Show.vue'
 import Users from './pages/Users.vue';
 
-
+// Paramètres des différentes routes
 const routes = [
   {
     path: '/',
@@ -22,6 +22,7 @@ const routes = [
   },
 ];
 
+// Création du routeur
 const router = createRouter({
   history: createWebHistory(),
   routes,
