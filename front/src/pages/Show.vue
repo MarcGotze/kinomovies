@@ -24,24 +24,18 @@ onMounted(async () => {
 
  // Fonction pour filtrer les utilisateurs en fonction des genres du film
  const filterUsersByMovieGenres = () => {
-  // Récupère les genres du film
   const movieGenres = movieDetails.value.genres.map((genre) => genre.name);
-  // Filtre les utilisateurs en fonction des genres du film
   const filteredUsers = users.value.filter((user) => {
-    // Vérifie s'ils ont des liked_tags similaires aux genres du film
     const likedTagsIntersection = user.liked_tags.filter((likedTag) =>
       movieGenres.includes(likedTag.name)
     );
 
-    // Vérifie s'ils ont des disliked_tags en commun avec les genres du film
     const dislikedTagsIntersection = user.disliked_tags.filter((dislikedTag) =>
       movieGenres.includes(dislikedTag.name)
     );
 
-    // Calcule la note en fonction du nombre de correspondances entre les genres du film et les liked_tags
+    // Ajoute la note de compatibilité à l'utilisateur
     const userLiked = likedTagsIntersection.length;
-
-    // Ajoute la note à l'utilisateur
     user.rating = (userLiked / movieGenres.length) * 10
 
     // Si l'utilisateur a des liked_tags similaires mais aucun disliked_tags en commun, on affiche
