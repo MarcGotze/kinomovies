@@ -7,7 +7,7 @@ const options = {
   }
 };
 
-// FETCHING ALL USERS
+// Récupère tous les users de la DB via Rails API
 export const getUsers = async () => {
   return axios.get(apiUsers + "users", options).then(response => response.data)
 };
