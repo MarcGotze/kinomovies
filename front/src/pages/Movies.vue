@@ -28,10 +28,9 @@
 <template>
   <Banner :label="pageLabel" />
   <NavBar />
-  <!-- La variable selectedPage est émise à son parent movies via le composant pagination -->
-  <Pagination @page="selectedPage = $event"/>
+
+  <Pagination @page="selectedPage = $event"/> <!-- La variable selectedPage est émise à movies-->
   <div class="movies-container mb-14">
-    <!-- itération sur les movies pour l'affichage -->
     <div class="movies-card" v-if="movies" v-for="movie in movies" :key="movie.id">
       <router-link :to="'/show/' + movie.id"><img :src="image + movie.backdrop_path" :alt="movie.title + ' backdrop'">
         <div class="hover-box">
