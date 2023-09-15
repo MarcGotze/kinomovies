@@ -38,7 +38,13 @@ onMounted(async () => {
       movieGenres.includes(dislikedTag.name)
     );
 
-    // Si l'utilisateur a des liked_tags similaires mais aucun disliked_tags en commun, ok
+    // Calcule la note en fonction du nombre de correspondances entre les genres du film et les liked_tags
+    const userLiked = likedTagsIntersection.length;
+
+    // Ajoute la note à l'utilisateur
+    user.rating = (userLiked / movieGenres.length) * 10
+
+    // Si l'utilisateur a des liked_tags similaires mais aucun disliked_tags en commun, on affiche
     return likedTagsIntersection.length > 0 && dislikedTagsIntersection.length === 0;
   });
   return filteredUsers;
@@ -52,6 +58,7 @@ onMounted(async () => {
   <div class="movie-show flex my-5" v-if="movieDetails">
     <img :src="image + movieDetails.poster_path" :alt="movieDetails.title + ' poster'">
     <div class="flex flex-col">
+      <span class="movie-title-responsive my-5">{{ movieDetails.title }}</span>
       <div class="movie-infos ml-5">
         <p class="text-lg">{{ movieDetails.overview }}</p>
         <ul class="mt-5 flex">

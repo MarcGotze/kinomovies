@@ -33,3 +33,11 @@
 .collapse-content {
   border-top: solid 1px #9B9999;
 }
+
+// RESPONSIVE
+
+@media (max-width: 767px) {
+  .collapse-arrow {
+    display: none;
+  }
+}
