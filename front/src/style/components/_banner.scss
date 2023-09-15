@@ -20,3 +20,11 @@ header {
   background-color: white;
   border-radius: 50%;
 }
+
+// RESPONSIVE
+
+@media (max-width: 767px) {
+  .banner-title {
+   display: none;
+  }
+}

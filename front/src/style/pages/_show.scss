@@ -11,3 +11,25 @@
 .modal-box {
   max-width: none !important;
 }
+
+.movie-title-responsive {
+  display: none;
+}
+
+// RESPONSIVE
+
+@media (max-width: 767px) {
+  .movie-show {
+    img {
+      display: none;
+    }
+  }
+
+  .movie-title-responsive {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+  }
+}
