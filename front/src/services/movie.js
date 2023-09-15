@@ -13,8 +13,7 @@ export const getMovies = async (page) => {
   return axios.get(moviesUrl, options).then(response => response.data.results)
 };
 
-// FETCHING MOVIES GENRES
-// export const getGenres = async () => {
-//   const genresUrl = 'https://api.themoviedb.org/3/genre/movie/list?language=en';
-//   return fetch(genresUrl, options).then(response => response.json()).then(response => response.results)
-// };
+export const getMovie = async (id) => {
+  const movieUrl = `https://api.themoviedb.org/3/movie/${id}?language=en-US`;
+  return axios.get(movieUrl, options).then(response => response.data)
+};
