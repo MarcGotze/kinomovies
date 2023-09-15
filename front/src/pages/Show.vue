@@ -1,7 +1,7 @@
 <script setup>
 import Banner from '../components/Banner.vue';
 import NavBar from '../components/NavBar.vue';
-import User from '../components/User.vue';
+import Cards from '../components/Cards.vue';
 import { ref, onMounted } from 'vue';
 import { getMovie } from '../services/movie.js';
 import { getUsers } from '../services/users.js';
@@ -12,7 +12,6 @@ const movieId = route.params.id; // Récupération de l'ID du film depuis les pa
 const movieDetails = ref(null);
 const users = ref(null)
 const filteredUsers = ref([]);
-const userRatings = ref({});
 const image = "https://image.tmdb.org/t/p/w300/";
 
 // Récupère les détails du film au chargement du composant
@@ -67,7 +66,7 @@ onMounted(async () => {
           <button  class="btn mt-5" onclick="my_modal_5.showModal()">Display them</button>
             <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
               <div class="modal-box max-w-none">
-                <User :users="filteredUsers" />
+                <Cards :users="filteredUsers" />
                 <div class="modal-action">
                   <form method="dialog">
                     <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
