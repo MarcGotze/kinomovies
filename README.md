@@ -29,7 +29,7 @@ Create a .env file at the root of the /front folder, then add :
 npm install
 
 # Launch frontend server
-front npm run dev
+npm run dev
 ```
 
 
