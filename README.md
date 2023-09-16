@@ -22,6 +22,7 @@ rails s
 ### Go to /front folder
 Create a .env file at the root of the /front folder, then add :
 >VITE_TMDB_KEY=USE_YOUR_TMDB_API_KEY
+
 >VITE_API_BACK_USERS=http://127.0.0.1:3000/
 ```bash
 # Install packages
