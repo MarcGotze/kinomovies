@@ -1,0 +1,33 @@
+version: "3.9"
+services:
+  back:
+    container_name: rails
+    build: ./back/
+    depends_on:
+      - db
+    environment:
+      BACK_DATABASE_HOST: db
+      BACK_DATABASE_USERNAME: back
+      BACK_DATABASE_PASSWORD: password123
+    ports:
+      - 3000:3000
+  db:
+    container_name: railsdb
+    image: postgres:alpine
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: back
+      POSTGRES_PASSWORD: password123
+    volumes:
+      - postgres-vol:/var/lib/postgresql/data
+  front:
+    container_name: web
+    build: ./front/
+    ports:
+      - 4173:4173
+    environment:
+      VITE_TMDB_KEY: PLACEHOLDER
+      VITE_API_BACK_USERS: http://127.0.0.1:3000/
+volumes:
+  postgres-vol:

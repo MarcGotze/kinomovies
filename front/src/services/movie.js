@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const apiKey = import.meta.env.VITE_TMDB_KEY
+const apiKey = import.meta.env.VITE_TMDB_KEY;
+
 const options = {
   headers: {
     accept: 'application/json',
