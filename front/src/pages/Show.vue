@@ -79,7 +79,11 @@ function toggleModal(state) {
               </button>
               <button class="btn" @click="toggleModal(false)">Close</button>
             </div>
-            <form method="dialog" class="modal-backdrop" @click.prevent="toggleModal(false)">
+            <form
+              method="dialog"
+              class="modal-backdrop"
+              @click.prevent="toggleModal(false)"
+            >
               <button>close</button>
             </form>
           </dialog>

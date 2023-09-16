@@ -26,8 +26,8 @@ export function filterUsersByMovieGenres(movieDetails, users){
     const userLiked = likedTagsIntersection.length;
     user.rating = (userLiked / movieGenres.length) * 10;
 
-    const shouldDisplayUser = likedTagsIntersection.length > 0 && dislikedTagsIntersection.length === 0
-    return shouldDisplayUser;
+    const shouldDisplayUsers = likedTagsIntersection.length > 0 && dislikedTagsIntersection.length === 0
+    return shouldDisplayUsers;
   });
   return filteredUsers;
 };
