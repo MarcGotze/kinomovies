@@ -9,12 +9,12 @@ const options = {
   }
 };
 
-export const getMovies = async (page) => {
+export async function getMovies(page){
   const moviesUrl = `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=${page}`;
   return axios.get(moviesUrl, options).then(response => response.data.results)
 };
 
-export const getMovie = async (id) => {
+export async function getMovie(id){
   const movieUrl = `https://api.themoviedb.org/3/movie/${id}?language=en-US`;
   return axios.get(movieUrl, options).then(response => response.data)
 };
