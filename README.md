@@ -26,7 +26,7 @@ Create a .env file at the root of the /front folder, then add :
 >VITE_API_BACK_USERS=http://127.0.0.1:3000/
 ```bash
 # Install packages
-front npm install
+npm install
 
 # Launch frontend server
 front npm run dev
@@ -41,7 +41,8 @@ front npm run dev
 - Docker
 
 ## Run
-
+In the docker-compose.yml file :
+>VITE_TMDB_KEY=USE_YOUR_TMDB_API_KEY
 ```bash
 docker compose build
 
