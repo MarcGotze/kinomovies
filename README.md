@@ -12,6 +12,12 @@
 # Install packages
 bundle install
 
+# Init database
+rails db:create
+
+# Init migrations
+rails db:migrate
+
 # Feed the database / First time only
 rails db:seed
 
