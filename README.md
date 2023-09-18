@@ -12,14 +12,16 @@
 # Install packages
 bundle install
 
+# First time only
 # Init database
 rails db:create
 
 # Init migrations
 rails db:migrate
 
-# Feed the database / First time only
+# Feed the database
 rails db:seed
+# End First time only
 
 # Launch backend server
 rails s
